@@ -1,0 +1,22 @@
+{
+  "name": "discord-mockingbird",
+  "version": "0.0.1",
+  "description": "Discord bot that you can \"teach\" new commands and responses to on the fly.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": "https://github.com/tokenshift/discord-mockingbird",
+  "dependencies": {
+    "bufferutil": "^4.0.3",
+    "defaults": "^1.0.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "nedb": "^1.8.0",
+    "nedb-promises": "^4.1.1",
+    "utf-8-validate": "^5.0.4",
+    "winston": "^3.3.3"
+  }
+}

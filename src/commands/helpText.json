@@ -1,0 +1,1 @@
+"Use `/learn {command} {response...}` to teach Mockingbird new commands and responses, or `/unlearn {command}` to forget a command. `/list {command}` will display all of the responses known for a given command. Commands taught to Mockingbird are server-specific."

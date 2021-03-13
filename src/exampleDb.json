@@ -1,0 +1,7 @@
+[{
+  "type": "response",
+  "guildId": "{the guild ID}",
+  "channelId": "{null unless this is a channel-specific response}",
+  "command": "{the command name}",
+  "response": "{the memorized response text}"
+}]
