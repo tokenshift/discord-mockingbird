@@ -1,19 +1,17 @@
 const client = require('./client')
 const commands = require('./commands')
+const parseOptions = require('./commands/parseOptions')
 const log = require('./log')
 
 async function handler (interaction) {
-  let { id, name, args } = interaction.data
+  let { id, name } = interaction.data
+
   name = name.toLowerCase()
 
   const command = commands[name]
 
   log.info(`Processing "${name}" command`, {
-    command: {
-      id,
-      name,
-      args
-    }
+    command: interaction.data
   })
 
   if (command) {
