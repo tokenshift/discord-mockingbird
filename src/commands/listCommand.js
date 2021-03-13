@@ -23,7 +23,7 @@ module.exports.handler = async function (client, interaction) {
     guildId: guild_id,
     channelId: { $in: [null, channel_id] },
     command: command
-  })
+  }).sort({added: 1, response: 1, command: 1})
 
   if (responses.length == 0) {
     await client.api.interactions(interaction.id, interaction.token).callback.post({

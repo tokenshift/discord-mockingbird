@@ -53,6 +53,7 @@ module.exports.handler = async function (client, interaction) {
   // Record the new response in the database.
   await db.insert({
     type: 'response',
+    added: new Date(),
     guildId: interaction.guild_id,
     channelId,
     command,

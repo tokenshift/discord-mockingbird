@@ -12,7 +12,7 @@ module.exports.handler = async function (client, interaction) {
     guildId: guild_id,
     channelId: { $in: [null, channel_id] },
     command: name
-  })
+  }).sort({added: 1, response: 1, command: 1})
 
   let index
   if (number) {

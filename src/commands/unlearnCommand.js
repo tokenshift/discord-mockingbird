@@ -67,7 +67,7 @@ module.exports.handler = async function (client, interaction) {
     guildId: guild_id,
     channelId: { $in: [null, channel_id] },
     command: command
-  })
+  }).sort({added: 1, response: 1, command: 1})
 
   if (number > responses.length) {
     await client.api.interactions(interaction.id, interaction.token).callback.post({
@@ -86,9 +86,6 @@ module.exports.handler = async function (client, interaction) {
   log.debug('Removing response', response)
   await db.remove({ _id: response._id })
   await cleanup(client, interaction)
-
-  // TODO: Kick off a cleanup for this guild here, to remove the command itself
-  // if that's the last response for this command.
 
   await client.api.interactions(interaction.id, interaction.token).callback.post({
     data: {
