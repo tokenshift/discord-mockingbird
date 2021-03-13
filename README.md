@@ -10,14 +10,14 @@ Learn a new command:
 
 ```
 /learn tavern The Fighting Eider
-> Learned "tavern".
+Learned "tavern".
 ```
 
 Then you can use `/tavern` to get an automated response:
 
 ```
 /tavern
-> The Fighting Eider
+The Fighting Eider
 ```
 
 All commands and responses are specific to the server where they're added.
@@ -53,5 +53,5 @@ Consider it gone.
 1: Three Sleeping Oxen
 ```
 
-If there's only one response known, then the `-n {number}` flag is unnecessary.
+If there's only one response known, then the `{number}` flag is unnecessary.
 If you want to unlearn ALL responses to that command, set `all` to `True`.
