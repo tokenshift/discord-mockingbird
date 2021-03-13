@@ -78,7 +78,7 @@ module.exports.handler = async function (client, interaction) {
     data: {
       type: 4,
       data: {
-        content: `Learned "${command}" => "${response}`
+        content: `Learned "${command}" => "${response}"`
       }
     }
   })
