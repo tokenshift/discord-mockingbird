@@ -23,7 +23,7 @@ Then you can use `/tavern` to get an automated response:
 All commands and responses are specific to the server where they're added.
 
 You can teach Mockingbird multiple responses to the same command, and it'll pick
-a random response each time. If you add the `-n {number}` flag, you can pick a
+a random response each time. If you add the `{number}` argument, you can pick a
 specific response instead:
 
 ```
@@ -34,7 +34,7 @@ Learned "tavern".
 /list tavern
 1: The Fighting Eider
 2: Three Sleeping Oxen
-/tavern -n 2
+/tavern 2
 Three Sleeping Oxen
 ```
 
@@ -54,13 +54,4 @@ Consider it gone.
 ```
 
 If there's only one response known, then the `-n {number}` flag is unnecessary.
-If you want to unlearn ALL responses to that command, add the `-a|--all` flag.
-
-You can use the `/list {command}` command to list all responses currently known
-for a given command:
-
-```
-/list tavern
-> 1: The Fighting Eider
-> 2: Three Sleeping Oxen
-```
+If you want to unlearn ALL responses to that command, set `all` to `True`.
