@@ -4,14 +4,17 @@ const parseOptions = require('./commands/parseOptions')
 const log = require('./log')
 
 async function handler (interaction) {
-  let { id, name } = interaction.data
-
+  let { name } = interaction.data
+  let options = parseOptions(interaction)
   name = name.toLowerCase()
 
   const command = commands[name]
 
   log.info(`Processing "${name}" command`, {
-    command: interaction.data
+    command: {
+      name: name,
+      options: options
+    }
   })
 
   if (command) {
